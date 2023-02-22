@@ -8,7 +8,7 @@ MULTI - LINE STRING
 cursor.execute(
 
 """
-CREATE TABLE "Music1"(
+CREATE TABLE "Music"(
     "SongID"    INTEGER NOT NULL UNIQUE,
     "Title"     TEXT,
     "Year"      INTEGER,
