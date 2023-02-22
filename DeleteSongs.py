@@ -1,0 +1,47 @@
+from ConnectSong import *
+from ReadSongs import read
+from time import sleep
+
+# Delete FROM songs WHERE SongID = "id"
+"""
+read()
+givenID = input("\nEnter the ID of the song you would like to delete: ")
+
+#print("Deleting song of ID:", givenID)
+
+cursor.execute(f"DELETE FROM songs WHERE SongID = {givenID}")
+
+connection.commit()
+
+print(f"The Song of ID {givenID} has been deleted.")
+
+sleep(2)
+
+read()
+
+"""
+
+# Another Way for Deleting - while loop validation
+
+def delete():
+    read()
+
+    sure = False
+
+    while sure == False:
+        givenID1 = input("\nEnter the ID of the song you would like to delete: ")
+        print(f"You have selected song of ID {givenID1}. ")
+        confirm = input(f"Are you sure you want to delete song {givenID1}? ")
+        if confirm == "yes":
+            sure = True
+
+    cursor.execute(f"DELETE FROM Music1 WHERE SongID = {givenID1}")
+    connection.commit()
+
+    print(f"The Song of ID {givenID1} has been deleted.")
+    sleep(2)
+    read()
+
+if __name__ == "__main__":
+    delete()
+
