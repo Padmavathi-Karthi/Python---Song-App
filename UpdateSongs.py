@@ -15,7 +15,7 @@ def update():
 
     cursor.execute(
     f"""
-    UPDATE Music1
+    UPDATE Music
     SET Title = "{title}", Year = "{year}", Artist = "{artist}", Genre = "{genre}"
     WHERE SongID = {givenID}
     ;

@@ -31,11 +31,11 @@ def delete():
     while sure == False:
         givenID1 = input("\nEnter the ID of the song you would like to delete: ")
         print(f"You have selected song of ID {givenID1}. ")
-        confirm = input(f"Are you sure you want to delete song {givenID1}? ")
-        if confirm == "yes":
+        confirm = input(f"Is this correct? y/n ")
+        if confirm == "y":
             sure = True
 
-    cursor.execute(f"DELETE FROM Music1 WHERE SongID = {givenID1}")
+    cursor.execute(f"DELETE FROM Music WHERE SongID = {givenID1}")
     connection.commit()
 
     print(f"The Song of ID {givenID1} has been deleted.")
